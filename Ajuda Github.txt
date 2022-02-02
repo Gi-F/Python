@@ -1,0 +1,50 @@
+// Aceder remotamente a um repositório por SSH depois de criar uma chave
+git remote add origin git@github.com:<username>/<project>.git
+git branch -M main
+git push -u origin main
+
+// Criar chaves para usar com o Github Actions
+# ssh-keygen -t rsa -m PEM
+
+// Preparar alterações (Passo 1)
+# git add .
+
+// Fazer Commit das alterações (Passo 2)
+# git commit -m "Commit"
+
+// Enviar alterações (Passo 3)
+# git push
+
+// Enviar alterações de outro branch criado (Passo 3)
+# git push origin nome-da-branch
+
+// Criar novo branch
+# git branch novo_branch
+
+// Ver branches
+# git branch
+
+// Fazer merge dos branches para o branch main, entrar no branch main e usar o comando
+# git merge novo_branch
+
+// Ver as alterações das branches
+$ git checkout novo_branch
+
+// Alterar o branch / Trabalhar com outro branch
+git checkout -b <branch> (-b cria o branch caso não exista)
+ex: git checkout -b main
+
+// Apagar branch branch localmente
+git branch -d nome-da-branch
+
+// Apagar branch remotamente
+git push origin --delete nome-da-branch
+
+// Remover o remote de um repositório local
+git remote remove origin
+
+// Ao adicionar um caminho no .gitignore
+git rm -r --cached .
+
+// Ignora as modificações de um ficheiro (exemplo: ficheiros de acesso à base de dados)
+git update-index --assume-unchanged filepath
