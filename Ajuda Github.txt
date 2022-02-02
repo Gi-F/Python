@@ -6,6 +6,9 @@ git push -u origin main
 // Criar chaves para usar com o Github Actions
 # ssh-keygen -t rsa -m PEM
 
+// Update do repositório online para o repositório local
+git pull
+
 // Preparar alterações (Passo 1)
 # git add .
 
